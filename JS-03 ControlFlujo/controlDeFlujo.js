@@ -254,3 +254,5 @@ switch (disponibilidadDoctor) {
         console.log("Error respuesta incorrecta");
 }
 
+
+
