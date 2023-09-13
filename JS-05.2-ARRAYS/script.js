@@ -203,7 +203,37 @@ let posicionesFinales = posicionesIniciales.map((nombre, posicion) => `Lugar ${p
 );
 
 // Usar console.log para mostrar el nuevo array
-console.log(posicionesFinales.join('\n'));    */
+console.log(posicionesFinales.join('\n'));   
+
+
+//Método "map()" para crear un nuevo array con los resultados de la función indicada aplicados a cada uno de sus elementos
+/*
+let nuevoArreglo = arregloOriginal.map(
+    function(elemento, indice, arreglo) {
+        //Código para procesar el elemento y devolver un nuevo valor
+        return nuevoValor;
+    }
+);
+    * arregloOriginal
+Este es el arreglo en el que deseas iterar y aplicar una función a cada elemento.
+    * elemento
+Es el valor del elemento actual en el arreglo durante la iteración.
+    * indice (opcional)
+Es el índice del elemento actual en el arreglo durante la iteración.
+    * arreglo (opcional)
+Es el arreglo original que se está recorriendo. Este argumento es opcional y generalmente no se usa con mucha frecuencia.
+    * nuevoArreglo
+Es el nuevo arreglo que se crea como resultado de aplicar la función a cada elemento del arreglo original. Este nuevo arreglo contendrá los valores devueltos por la función en lugar de los valores originales del arreglo original.
+    * function(elemento, indice, arreglo) { ... }
+Este es el argumento de función que defines para especificar cómo se procesará cada elemento del arreglo original. Debes proporcionar el código dentro de esta función que realice alguna operación en el elemento y devuelva el nuevoValor, que será el valor correspondiente en el nuevo arreglo resultante.
+*/
+
+/*
+let numeros = [1, 2, 3, 4, 5];
+//Crear otro arreglo con los números multiplicados x2 [2, 4, 6, 8, 10]
+let numerosPorDos = numeros.map(function (numero) { return numero * 2; })
+console.log(numerosPorDos);
+*/
 
 
 let corredores = ["Roberto", "Andrea", "Jorge", "Ramiro", "Sofía"];
