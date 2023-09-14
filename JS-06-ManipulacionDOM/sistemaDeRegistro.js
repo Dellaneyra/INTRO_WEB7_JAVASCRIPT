@@ -63,8 +63,7 @@ function generarTarjetaPaciente(paciente){
 
     //crear
     let tarjetaDiv = document.createElement("div"); //creo un container para mi tarjeta
-    tarjetaDiv.className = "col"; //aqui le especifico que es una columna
-
+    tarjetaDiv.className = "col-sm-12 col-md-6 col-lg-4"; //aqui le especifico que es una columna
     //crear contenido de la tarjeta copiando codigo de bootstrap, anteponiendo un backticks
     tarjetaDiv.innerHTML = `
     <div class="card border-info mb-3">
