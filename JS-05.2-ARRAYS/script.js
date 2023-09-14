@@ -235,7 +235,7 @@ let numerosPorDos = numeros.map(function (numero) { return numero * 2; })
 console.log(numerosPorDos);
 */
 
-
+/*
 let corredores = ["Roberto", "Andrea", "Jorge", "Ramiro", "Sofía"];
 console.log(corredores);
 
@@ -266,7 +266,50 @@ robertoByeBye();
 andreaBajaPosicion();
 entraJose();
 console.log(corredores);
+*/
+
+let corredores = ["Roberto", 
+"Andrea", 
+"Jorge", 
+"Ramiro", 
+"Sofía"];
+console.log(corredores);
+
+function jorgeAdelantaRoberto() {
+    corredores.splice(2, 1);   // Eliminamos a Jorge de su posición original
+    corredores.unshift("Jorge"); // Agregamos a Jorge en la primera posición
+}
+
+function ramiroAdelantaJorge() {
+    corredores.splice(3, 1); // Eliminamos a Ramiro de su posición original
+    corredores.unshift("Ramiro"); // Agregamos a Ramiro a la primera posición delante de Jorge
+}
+
+function robertoByeBye() {
+    let indexRoberto = corredores.indexOf("Roberto"); // Obtenemos el índice de Roberto
+    corredores.splice(indexRoberto, 1); // Eliminamos a Roberto de su posición actual
+}
+
+function andreaBajaPosicion() {
+    let indexAndrea = corredores.indexOf("Andrea"); // Obtenemos el índice de Andrea
+    corredores.splice(indexAndrea, 1); // Eliminamos a Andrea de su posición actual
+    let newIndex = indexAndrea + 1; // Calculamos la nueva posición
+    corredores.splice(newIndex, 0, "Andrea"); // Agregamos a Andrea en la nueva posición
+}
+
+function entraJose() {
+    corredores.push("José"); // Agregamos a José al final de la lista en la última posición
+}
+
+// Utilizando un bucle for each para mostrar los corredores
+function mostrarCorredores() {
+    corredores.forEach(function(corredor) {
+        console.log(corredor);
+    });
+}
 
 
+console.log("Lista de corredores después de las operaciones:");
+mostrarCorredores();
 
 
