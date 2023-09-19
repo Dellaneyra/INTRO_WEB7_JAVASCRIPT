@@ -185,4 +185,38 @@ function generarTarjetaProducto (producto){
 }
 
 
+//Metodo POST para enviar un nuevo producto a nuestra base de datos de la FakeStoreAPI
 
+fetch('https://fakestoreapi.com/products',{  //endpoint (primero revisar a donde va la ruta)
+            method:"POST",   //especificar el tipo de metodo
+            body:JSON.stringify(  //instruccion para serializar el cuerpo de mi solicitud (para la interpretaacion del servidor)
+                {
+                    title:'Sopa Maruchan Habanero',
+                    price: 15.5,
+                    description: 'Deliciosa sopa maruchan de habanero',
+                    image: 'https://modeloramanow.vtexassets.com/arquivos/ids/155905/maruchan_camaron-y-habanero.png?v=637638069704570000',
+                    category: 'Sopas instantaneas'
+                }
+            )
+        })
+            .then(res=>res.json())  //metodo para la respuesta (para saber que el producto llego bien al servidor)
+            .then(json=>console.log(json)) //impresion en consola para revisar la info
+
+
+
+
+fetch('https://fakestoreapi.com/products',{ //endpoint
+            method:"PUT", //especificar el tipo de metodo
+            body:JSON.stringify( //instruccion para serializar el cuerpo de mi solicitud (para la interpretacion del servidor)
+                {
+                    id: 1,
+                    title: inputTitulo.value,
+                    price: inputPrecio.value,
+                    description: inputDescripcion.value,
+                    image: inputImagen.value,
+                    category: inputCategoria.value
+                }
+            )
+        })
+            .then(res=>res.json()) //metodo para la respuesta (saber que mi producto llego con bien al servidor)
+            .then(json=>console.log(json))//impresion en consola para revisar la info
